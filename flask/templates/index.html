@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Grades</title>
+    {{ bootstrap.load_css() }}
+</head>
+<body class="bg-secondary-subtle">
+    <main class="container">
+        <h1 class="my-4 text-center fs-1 fw-bold">Students Grades</h1>
+        
+        <!-- ? Number of passed/failed students -->
+        <section id="results-num" class="d-flex flex-wrap justify-content-evenly">
+            <p class="fs-3">
+                Passed students: 
+                <span class="fw-bold text-success">
+                    {{ passed_students_num }}
+                </span>
+            </p>
+            <p class="fs-3">
+                Failed students: 
+                <span class="fw-bold text-danger">
+                    {{ failed_students_num }}
+                </span>
+            </p>
+        </section>
+        
+        <section class="container bg-secondary rounded">
+            {{ table|safe }}
+        </section>
+        {{ bootstrap.load_js() }}
+    </main>
+
+    <script>
+        const allTd = document.querySelectorAll("td");
+        allTd.forEach(td => {
+            if (td.textContent == "passed") {
+                td.classList.add("bg-success-subtle");
+            } else if (td.textContent == "failed") {
+                td.classList.add("bg-danger-subtle");
+            }
+
+            if (td.textContent <= 60) {
+                td.classList.add("text-danger");
+            }
+        })
+    </script>
+</body>
+</html>
