@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, send_from_directory, request, redirect, url_for
 from flask_bootstrap import Bootstrap5
 from dataframes import get_students_status, get_highest_grade, get_lowest_grade, get_average_grade, passed_students_count,  failed_students_count
@@ -52,4 +53,6 @@ def download_file():
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    #app.run(debug=False)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
