@@ -30,18 +30,18 @@
         <section id="grades" class="fs-5 d-flex flex-wrap justify-content-evenly">
             <p>
                 Highest grade: 
-                <span class="text-light bg-primary rounded p-1">{{ highest_grade }}</span>
+                <span class="text-light bg-success rounded p-1">{{ highest_grade }}</span>
             </p>
             <p>
                 Average grade: 
-                <span class="text-light bg-warning rounded p-1">{{ average_grade }}</span> 
+                <span class="text-light bg-primary rounded p-1">{{ average_grade }}</span> 
             </p>
             <p>
                 Lowest grade: 
                 <span class="text-light bg-danger rounded p-1">{{ lowest_grade }}</span> 
             </p>
         </section>
-        
+       
         <!-- ? All students table -->
         <section class="container bg-secondary rounded">
             {{ table|safe }}
@@ -52,6 +52,8 @@
             <img src="{{ url_for('static', filename='img/pie_chart.png') }}" alt="pie chart" class="rounded">
             <img src="{{ url_for('static', filename='img/histogram.png') }}" alt="histogram chart" class="rounded">
         </section>
+
+        <a href="{{ url_for('download_file') }}" class="btn btn-primary my-4 d-block m-auto w-25" download="students_result.csv">Download resulting file</a>
 
         {{ bootstrap.load_js() }}
     </main>

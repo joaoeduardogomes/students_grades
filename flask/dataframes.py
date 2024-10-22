@@ -14,7 +14,8 @@ def get_students_grades():
 def get_students_status():
     df = get_students_grades()
     df['status'] = df['grade'].apply(lambda x: "passed" if x >= 60 else "failed")
-    return df
+    df.to_csv("static/output/students_result.csv", index=False)
+    return df.sort_values(by='student name', ascending=True)
 
 def get_highest_grade():
     df = get_students_grades()

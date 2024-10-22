@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 from flask_bootstrap import Bootstrap5
 from dataframes import get_students_status, get_highest_grade, get_lowest_grade, get_average_grade, passed_students_count,  failed_students_count
 from plots import plot_pie_chart, plot_histogram
@@ -23,6 +23,10 @@ def index():
     histogram_path = plot_histogram()
 
     return render_template("index.html", table=table_html, passed_students_num=passed_students_num, failed_students_num=failed_students_num, average_grade=average_grade, highest_grade=highest_grade, lowest_grade=lowest_grade, pie_chart=pie_chart_path, histogram=histogram_path)
+
+@app.route("/download")
+def download_file():
+    return send_from_directory("static/output", "students_result.csv", as_attachment=True)
 
 
 if __name__ == "__main__":

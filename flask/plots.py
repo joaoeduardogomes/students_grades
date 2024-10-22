@@ -31,6 +31,7 @@ def plot_histogram():
 
     plt.figure(figsize=(4, 4), facecolor='lightgray')
     plt.hist(df['grade'], bins=20, color="blue", alpha=0.7)
+    plt.grid(color='gray', linestyle='--', linewidth=0.5, alpha=0.5)
     plt.xlabel('Grade')
     plt.ylabel("Frequency")
     plt.title("Distribution of Grades")
