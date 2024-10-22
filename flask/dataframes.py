@@ -6,9 +6,9 @@ def get_dataframe():
 
 def get_students_grades():
     df = get_dataframe()
-    df["grade"] = df[["score 1", "score 2", "score 3"]].mean(axis=1)
-    df['grade'] = df['grade'].apply(lambda x: f"{x:.2f}")
-    df['grade'] = pd.to_numeric(df['grade'])
+    df["grade"] = df[["score 1", "score 2", "score 3"]].mean(axis=1).round(2)
+    #df['grade'] = df['grade'].apply(lambda x: f"{x:.2f}")
+    #df['grade'] = pd.to_numeric(df['grade'])
     return df
 
 def get_students_status():
@@ -26,11 +26,12 @@ def get_lowest_grade():
 
 def get_average_grade():
     df = get_students_grades()
-    return df['grade'].mean()
+    return df['grade'].mean().round(2)
 
 def passed_students():
     df = get_students_status()
-    return df[df['status'] == 'passed']
+    passed_students_df = df[df['status'] == 'passed']
+    return passed_students_df[['student name', 'grade']]
 
 def passed_students_count():
     df = get_students_status()
@@ -38,7 +39,8 @@ def passed_students_count():
 
 def failed_students():
     df = get_students_status()
-    return df[df['status'] == 'failed']
+    failed_students_df = df[df['status'] == 'failed']
+    return failed_students_df[['student name', 'grade']]
 
 def failed_students_count():
     df = get_students_status()

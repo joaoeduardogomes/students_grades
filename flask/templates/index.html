@@ -7,7 +7,7 @@
     {{ bootstrap.load_css() }}
 </head>
 <body class="bg-secondary-subtle">
-    <main class="container">
+    <main class="container mb-4">
         <h1 class="my-4 text-center fs-1 fw-bold">Students Grades</h1>
         
         <!-- ? Number of passed/failed students -->
@@ -25,10 +25,34 @@
                 </span>
             </p>
         </section>
+
+        <!-- ? Grades -->
+        <section id="grades" class="fs-5 d-flex flex-wrap justify-content-evenly">
+            <p>
+                Highest grade: 
+                <span class="text-light bg-primary rounded p-1">{{ highest_grade }}</span>
+            </p>
+            <p>
+                Average grade: 
+                <span class="text-light bg-warning rounded p-1">{{ average_grade }}</span> 
+            </p>
+            <p>
+                Lowest grade: 
+                <span class="text-light bg-danger rounded p-1">{{ lowest_grade }}</span> 
+            </p>
+        </section>
         
+        <!-- ? All students table -->
         <section class="container bg-secondary rounded">
             {{ table|safe }}
         </section>
+
+        <!-- ? Pie chart -->
+        <section id="pie-chart" class="container d-flex flex-wrap justify-content-evenly">
+            <img src="{{ url_for('static', filename='img/pie_chart.png') }}" alt="pie chart" class="rounded">
+            <img src="{{ url_for('static', filename='img/histogram.png') }}" alt="histogram chart" class="rounded">
+        </section>
+
         {{ bootstrap.load_js() }}
     </main>
 
@@ -41,7 +65,7 @@
                 td.classList.add("bg-danger-subtle");
             }
 
-            if (td.textContent <= 60) {
+            if (+td.textContent <= 60) {
                 td.classList.add("text-danger");
             }
         })
