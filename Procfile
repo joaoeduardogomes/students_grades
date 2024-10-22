@@ -1,0 +1,1 @@
+web: cd flask && gunicorn server:app
