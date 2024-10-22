@@ -14,9 +14,13 @@ def plot_pie_chart():
         print("No data to plot.")
         return None
 
+    color_map = {
+        "passed": "lightgreen", 
+        "failed": "tomato"
+        }
 
     plt.figure(figsize=(4, 4), facecolor='lightgray')
-    plt.pie(status_counts, labels=status_counts.index, autopct="%1.1f%%", colors=["lightgreen", "red"])
+    plt.pie(status_counts, labels=status_counts.index, autopct="%1.1f%%", colors=[color_map[label] for label in status_counts.index])
     plt.title("Students Status")
 
     img_path = os.path.join("static", "img", "pie_chart.png")

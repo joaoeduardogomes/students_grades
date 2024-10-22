@@ -2,6 +2,7 @@ import pandas as pd
 
 def get_dataframe():
     df = pd.read_csv("static/docs/students_scores.csv")
+    df.columns = df.columns.str.lower()
     return df
 
 def get_students_grades():

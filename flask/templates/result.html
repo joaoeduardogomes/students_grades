@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Grades — Results</title>
+    {{ bootstrap.load_css() }}
+</head>
+<body class="bg-secondary-subtle">
+    <main class="container mb-4">
+        <a href="{{ url_for('index') }}" class="btn btn-primary my-4 d-block  w-25">Go back and check a new file</a>
+        <h1 class="my-4 text-center fs-1 fw-bold">Students Grades — Results</h1>
+        
+        <!-- ? Number of passed/failed students -->
+        <section id="results-num" class="d-flex flex-wrap justify-content-evenly">
+            <p class="fs-3">
+                Passed students: 
+                <span class="fw-bold text-success">
+                    {{ passed_students_num }}
+                </span>
+            </p>
+            <p class="fs-3">
+                Failed students: 
+                <span class="fw-bold text-danger">
+                    {{ failed_students_num }}
+                </span>
+            </p>
+        </section>
+
+        <!-- ? Grades -->
+        <section id="grades" class="fs-5 d-flex flex-wrap justify-content-evenly">
+            <p>
+                Highest grade: 
+                <span class="text-light bg-primary rounded p-1">{{ highest_grade }}</span>
+            </p>
+            <p>
+                Average grade: 
+                <span class="text-light bg-dark rounded p-1">{{ average_grade }}</span> 
+            </p>
+            <p>
+                Lowest grade: 
+                <span class="text-light bg-secondary rounded p-1">{{ lowest_grade }}</span> 
+            </p>
+        </section>
+    
+        <!-- ? All students table -->
+        <section class="container bg-secondary rounded">
+            {{ table|safe }}
+        </section>
+
+        <!-- ? Pie chart -->
+        <section id="pie-chart" class="container d-flex flex-wrap justify-content-evenly">
+            <img src="{{ url_for('static', filename='img/pie_chart.png') }}" alt="pie chart" class="rounded">
+            <img src="{{ url_for('static', filename='img/histogram.png') }}" alt="histogram chart" class="rounded">
+        </section>
+
+        <a href="{{ url_for('download_file') }}" class="btn btn-primary my-4 d-block m-auto w-25" download="students_result.csv">Download resulting file</a>
+
+    </main>
+
+    {{ bootstrap.load_js() }}
+
+    <script>
+        const allTd = document.querySelectorAll("td");
+        allTd.forEach(td => {
+            if (td.textContent == "passed") {
+                td.classList.add("bg-success-subtle");
+            } else if (td.textContent == "failed") {
+                td.classList.add("bg-danger-subtle");
+            }
+
+            if (+td.textContent <= 60) {
+                td.classList.add("text-danger");
+            }
+        })
+
+        const allTh = document.querySelectorAll("th");
+        allTh.forEach(th => {
+            th.textContent = th.textContent.toUpperCase();
+        })
+    </script>
+</body>
+</html>

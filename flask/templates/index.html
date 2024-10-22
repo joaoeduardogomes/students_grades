@@ -7,70 +7,32 @@
     {{ bootstrap.load_css() }}
 </head>
 <body class="bg-secondary-subtle">
-    <main class="container mb-4">
+    <main class="container mb-4 bg-body-tertiary rounded-2 text-center">
         <h1 class="my-4 text-center fs-1 fw-bold">Students Grades</h1>
-        
-        <!-- ? Number of passed/failed students -->
-        <section id="results-num" class="d-flex flex-wrap justify-content-evenly">
-            <p class="fs-3">
-                Passed students: 
-                <span class="fw-bold text-success">
-                    {{ passed_students_num }}
-                </span>
-            </p>
-            <p class="fs-3">
-                Failed students: 
-                <span class="fw-bold text-danger">
-                    {{ failed_students_num }}
-                </span>
-            </p>
-        </section>
 
-        <!-- ? Grades -->
-        <section id="grades" class="fs-5 d-flex flex-wrap justify-content-evenly">
-            <p>
-                Highest grade: 
-                <span class="text-light bg-success rounded p-1">{{ highest_grade }}</span>
-            </p>
-            <p>
-                Average grade: 
-                <span class="text-light bg-primary rounded p-1">{{ average_grade }}</span> 
-            </p>
-            <p>
-                Lowest grade: 
-                <span class="text-light bg-danger rounded p-1">{{ lowest_grade }}</span> 
-            </p>
-        </section>
-       
-        <!-- ? All students table -->
-        <section class="container bg-secondary rounded">
-            {{ table|safe }}
-        </section>
+        <h2>Upload your CSV file:</h2>
+        <span id="warning" class="fst-italic fw-light">
+            <p >* The CSV file must have the columns:</p>
+            <ul class="w-25 d-block m-auto text-start">
+                <li>student name</li>
+                <li>score 1</li>
+                <li>score 2</li>
+                <li>score 3</li>
+            </ul>
+        </span>
 
-        <!-- ? Pie chart -->
-        <section id="pie-chart" class="container d-flex flex-wrap justify-content-evenly">
-            <img src="{{ url_for('static', filename='img/pie_chart.png') }}" alt="pie chart" class="rounded">
-            <img src="{{ url_for('static', filename='img/histogram.png') }}" alt="histogram chart" class="rounded">
-        </section>
+        <form method="POST" enctype="multipart/form-data" class="d-flex flex-column gap-3 py-4">
+            <div class="form-group container">
+                <input type="file" name="file" accepted=".csv" required class="form-control-file">
+            </div>
+            <button type="submit" class="btn btn-primary w-25 d-block m-auto">Upload</button>
+        </form>
 
-        <a href="{{ url_for('download_file') }}" class="btn btn-primary my-4 d-block m-auto w-25" download="students_result.csv">Download resulting file</a>
-
-        {{ bootstrap.load_js() }}
+        {% if error %}
+            <p class="text-danger">{{ error }}</p>
+        {% endif %}
     </main>
 
-    <script>
-        const allTd = document.querySelectorAll("td");
-        allTd.forEach(td => {
-            if (td.textContent == "passed") {
-                td.classList.add("bg-success-subtle");
-            } else if (td.textContent == "failed") {
-                td.classList.add("bg-danger-subtle");
-            }
-
-            if (+td.textContent <= 60) {
-                td.classList.add("text-danger");
-            }
-        })
-    </script>
+    {{ bootstrap.load_js() }}
 </body>
 </html>

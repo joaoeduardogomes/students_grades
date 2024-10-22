@@ -1,53 +1,48 @@
 student name,score 1,score 2,score 3
-Alice,85,90,75
-Bob,92,88,93
-Charlie,78,95,82
-David,55,60,45
-Emily,82,91,84
-Frank,75,86,90
-Grace,94,89,92
-Henry,88,93,85
-Isabella,79,87,91
-Jack,95,80,86
-Kate,83,92,87
-Leo,76,85,94
-Mia,90,88,90
-Noah,87,93,82
-Olivia,78,89,95
-Paul,92,86,84
-Quinn,85,90,87
-Rachel,77,88,93
-Sarah,91,85,89
-Thomas,80,92,86
-Ursula,79,87,94
-Victor,93,83,88
-William,86,91,85
-Xavier,74,88,92
-Yolanda,95,82,87
-Zachary,81,90,86
-Abigail,60,40,35
-Benjamin,55,65,70
-Chloe,70,80,55
-Daniel,45,50,30
-Eleanor,65,75,80
-Frederick,50,60,75
-Gabriella,70,85,45
-Henry,92,81,87
-Isabella,85,94,80
-Jack,78,88,93
-Kate,91,85,86
-Leo,83,92,87
-Mia,75,89,94
-Noah,87,83,90
-Olivia,79,91,85
-Paul,92,86,88
-Quinn,85,90,87
-Rachel,77,88,93
-Sarah,91,85,89
-Thomas,80,92,86
-Ursula,79,87,94
-Victor,93,83,88
-William,86,91,85
-Xavier,74,88,92
-Yolanda,95,82,87
-Zachary,81,90,86
+João Silva,85,72,90
+Maria Pereira,92,88,95
+José Santos,78,69,82
+Ana Costa,90,85,93
+Pedro Ribeiro,75,68,80
+Paulo Rodrigues,82,75,88
+Luísa Fernandes,94,90,97
+António Gonçalves,70,65,78
+Sofia Almeida,88,82,92
+Beatriz Carvalho,91,87,94
+Carlos Silva,76,70,83
+Daniela Pereira,89,84,91
+Eduardo Santos,72,67,79
+Fernanda Costa,93,88,96
+Gustavo Ribeiro,77,71,84
+Helena Rodrigues,83,78,90
+Isabel Fernandes,95,92,98
+João Gonçalves,71,66,79
+Maria Almeida,87,81,91
+Beatriz Carvalho,90,85,93
+Carlos Silva,75,69,82
+Daniela Pereira,88,83,90
+Eduardo Santos,73,68,81
+Fernanda Costa,92,87,95
+Gustavo Ribeiro,76,70,83
+Helena Rodrigues,81,76,88
+Isabel Fernandes,94,91,97
+João Gonçalves,72,67,80
+Maria Almeida,86,80,92
+Beatriz Carvalho,89,84,91
+Carlos Silva,74,68,81
+Daniela Pereira,87,82,90
+Eduardo Santos,75,70,83
+Fernanda Costa,91,86,94
+Gustavo Ribeiro,77,72,85
+Helena Rodrigues,82,77,89
+Isabel Fernandes,93,90,96
+João Gonçalves,73,68,81
+Maria Almeida,85,79,91
+Beatriz Carvalho,88,83,90
+Carlos Silva,76,71,84
+Daniela Pereira,89,84,92
+Eduardo Santos,74,69,82
+Fernanda Costa,90,85,93
+Gustavo Ribeiro,75,70,83
+Helena Rodrigues,81,76,88
+Isabel Fernandes,92,88,95

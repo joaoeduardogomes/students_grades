@@ -1,53 +1,48 @@
 student name,score 1,score 2,score 3,grade,status
-Alice,85,90,75,83.33,passed
-Bob,92,88,93,91.0,passed
-Charlie,78,95,82,85.0,passed
-David,55,60,45,53.33,failed
-Emily,82,91,84,85.67,passed
-Frank,75,86,90,83.67,passed
-Grace,94,89,92,91.67,passed
-Henry,88,93,85,88.67,passed
-Isabella,79,87,91,85.67,passed
-Jack,95,80,86,87.0,passed
-Kate,83,92,87,87.33,passed
-Leo,76,85,94,85.0,passed
-Mia,90,88,90,89.33,passed
-Noah,87,93,82,87.33,passed
-Olivia,78,89,95,87.33,passed
-Paul,92,86,84,87.33,passed
-Quinn,85,90,87,87.33,passed
-Rachel,77,88,93,86.0,passed
-Sarah,91,85,89,88.33,passed
-Thomas,80,92,86,86.0,passed
-Ursula,79,87,94,86.67,passed
-Victor,93,83,88,88.0,passed
-William,86,91,85,87.33,passed
-Xavier,74,88,92,84.67,passed
-Yolanda,95,82,87,88.0,passed
-Zachary,81,90,86,85.67,passed
-Abigail,60,40,35,45.0,failed
-Benjamin,55,65,70,63.33,passed
-Chloe,70,80,55,68.33,passed
-Daniel,45,50,30,41.67,failed
-Eleanor,65,75,80,73.33,passed
-Frederick,50,60,75,61.67,passed
-Gabriella,70,85,45,66.67,passed
-Henry,92,81,87,86.67,passed
-Isabella,85,94,80,86.33,passed
-Jack,78,88,93,86.33,passed
-Kate,91,85,86,87.33,passed
-Leo,83,92,87,87.33,passed
-Mia,75,89,94,86.0,passed
-Noah,87,83,90,86.67,passed
-Olivia,79,91,85,85.0,passed
-Paul,92,86,88,88.67,passed
-Quinn,85,90,87,87.33,passed
-Rachel,77,88,93,86.0,passed
-Sarah,91,85,89,88.33,passed
-Thomas,80,92,86,86.0,passed
-Ursula,79,87,94,86.67,passed
-Victor,93,83,88,88.0,passed
-William,86,91,85,87.33,passed
-Xavier,74,88,92,84.67,passed
-Yolanda,95,82,87,88.0,passed
-Zachary,81,90,86,85.67,passed
+João Silva,85,72,90,82.33,passed
+Maria Pereira,92,88,95,91.67,passed
+José Santos,78,69,82,76.33,passed
+Ana Costa,90,85,93,89.33,passed
+Pedro Ribeiro,75,68,80,74.33,passed
+Paulo Rodrigues,82,75,88,81.67,passed
+Luísa Fernandes,94,90,97,93.67,passed
+António Gonçalves,70,65,78,71.0,passed
+Sofia Almeida,88,82,92,87.33,passed
+Beatriz Carvalho,91,87,94,90.67,passed
+Carlos Silva,76,70,83,76.33,passed
+Daniela Pereira,89,84,91,88.0,passed
+Eduardo Santos,72,67,79,72.67,passed
+Fernanda Costa,93,88,96,92.33,passed
+Gustavo Ribeiro,77,71,84,77.33,passed
+Helena Rodrigues,83,78,90,83.67,passed
+Isabel Fernandes,95,92,98,95.0,passed
+João Gonçalves,71,66,79,72.0,passed
+Maria Almeida,87,81,91,86.33,passed
+Beatriz Carvalho,90,85,93,89.33,passed
+Carlos Silva,75,69,82,75.33,passed
+Daniela Pereira,88,83,90,87.0,passed
+Eduardo Santos,73,68,81,74.0,passed
+Fernanda Costa,92,87,95,91.33,passed
+Gustavo Ribeiro,76,70,83,76.33,passed
+Helena Rodrigues,81,76,88,81.67,passed
+Isabel Fernandes,94,91,97,94.0,passed
+João Gonçalves,72,67,80,73.0,passed
+Maria Almeida,86,80,92,86.0,passed
+Beatriz Carvalho,89,84,91,88.0,passed
+Carlos Silva,74,68,81,74.33,passed
+Daniela Pereira,87,82,90,86.33,passed
+Eduardo Santos,75,70,83,76.0,passed
+Fernanda Costa,91,86,94,90.33,passed
+Gustavo Ribeiro,77,72,85,78.0,passed
+Helena Rodrigues,82,77,89,82.67,passed
+Isabel Fernandes,93,90,96,93.0,passed
+João Gonçalves,73,68,81,74.0,passed
+Maria Almeida,85,79,91,85.0,passed
+Beatriz Carvalho,88,83,90,87.0,passed
+Carlos Silva,76,71,84,77.0,passed
+Daniela Pereira,89,84,92,88.33,passed
+Eduardo Santos,74,69,82,75.0,passed
+Fernanda Costa,90,85,93,89.33,passed
+Gustavo Ribeiro,75,70,83,76.0,passed
+Helena Rodrigues,81,76,88,81.67,passed
+Isabel Fernandes,92,88,95,91.67,passed
