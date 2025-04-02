@@ -20,6 +20,7 @@ One of the biggest challenges was displaying the charts on the Flask web page. I
 
 ## How to use
 The easiest way to test the project is by using [this hosted link on Render](https://students-grades-1imn.onrender.com/). The code is also available here on GitHub for testing and customization to suit your needs.
+You can just use the csv file inside the "test csv files" folder if you just want to test this project.
 
 ## **License**
 
