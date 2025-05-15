@@ -1,4 +1,4 @@
-# Students grades **🇺🇸**
+# Students grades
 This project processes a CSV file containing students' scores, calculates their final grades, and indicates their status (passed/failed). It also provides useful information such as the mean grade of the students. Additionally, it displays two types of charts: a pie chart showing the percentage of students who passed or failed, and a histogram illustrating the distribution of grades.
 
 The code was initially [developed in Jupyter Notebook](https://github.com/joaoeduardogomes/students_grades/tree/main/jupyter) to create the logic. Once the functionality was confirmed, I built a [Flask version of the project](https://github.com/joaoeduardogomes/students_grades/tree/main/flask). This version includes the ability to upload a CSV file via the web interface and download a new CSV file with the calculated grades and statuses of the students.
